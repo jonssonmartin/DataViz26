@@ -1,0 +1,132 @@
+/*-- scss:defaults --*/
+
+@import url(./fonts/league-gothic/league-gothic.css);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+
+// fonts
+$font-family-sans-serif: Lato, sans-serif !default;
+
+// colors
+$body-bg: #fafafa !default;
+$code-block-bg: #245c60 !default;
+$body-color: #245c60 !default;
+$link-color: orange !default;
+$selection-bg: #245c60 !default;
+$code-color: var(-#245c60-hl-fu-color) !default;
+$primary-color: #245c60 !default;
+$secondary-color: orange !default;
+$tertiary-color: #245c60 !default;
+$yellow-color: yellow !default;
+
+/*-- Define Bootstrap color variables --*/
+
+// The page text color.
+$body-color: $primary-color;
+// Code block background
+$code-block-bg: #d3f0f0;
+//Background color of inline code 
+$code-bg: #e4f0f0;
+//color of inline code
+//$code-color: $tertiary-color;
+
+//code
+$code-color: #ffffff !default;
+$font-family-monospace: 'Inconsolata', monospace  !default;
+
+
+
+// headings
+$presentation-heading-font: "Lato", "Book Antiqua", Palatino, serif !default;
+$presentation-heading-color: #245c60 !default;
+
+/*-- scss:rules --*/
+
+.reveal pre.sourceCode code {
+	max-height: 3000px;
+	max-width: 2000px;
+}
+
+.reveal a {
+  line-height: 1.3em;
+}
+
+#title-slide {
+  .title, {
+    opacity: 1;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: 700;
+    font-family: "Lato";
+    text-shadow: 0px 0px 0px #245c60;
+    color: #245c60 !important; // was white
+}
+  .background: {
+    background-color: #245c60;
+    
+  }
+}
+
+// ändrar columnbredd
+
+.reveal .column-output {
+  width: 60% !important;
+}
+
+.reveal .column-code {
+  width: 40% !important;
+}
+
+// ändrar dynamisk bredd?
+
+/* --- outer shrink wrapper --- */
+.reveal .shrink-code {
+  width: fit-content !important;
+  max-width: 100% !important;
+}
+
+/* --- make the code container shrink to content --- */
+.reveal .shrink-code .cell,
+.reveal .shrink-code .cell-code,
+.reveal .shrink-code .code-with-copy,
+.reveal .shrink-code div.sourceCode {
+  display: inline-block !important;
+  width: fit-content !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0.6em 0.6em !important;   /* put padding here instead OBS var 0.2em, 0.6em */
+  box-sizing: border-box !important;
+}
+
+/* --- inner pre/code should not add extra width --- */
+.reveal .shrink-code pre,
+.reveal .shrink-code pre.sourceCode {
+  display: inline-block !important;
+  width: auto !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* --- preserve code line layout --- */
+.reveal .shrink-code pre code {
+  white-space: pre !important;
+}
+
+// Align figurer
+
+.reveal figure,
+.reveal .figure,
+.reveal .quarto-figure {
+  text-align: left !important;
+}
+
+.reveal figure img,
+.reveal .figure img,
+.reveal .quarto-figure img {
+  display: block;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
